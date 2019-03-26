@@ -18,7 +18,7 @@ foreach (file('source.csv') as $line) {
 		"title" => $row[0],
 		"seo_title" => $row[1],
 		"url" => $row[2],
-		"author" => $row[3],
+		"author" => array('name' => $row[3]),
 		"date" => $row[4],
 		"category" => $row[5],
 		"locales" => $row[6],
@@ -29,9 +29,10 @@ foreach (file('source.csv') as $line) {
 	echo json_encode($tab);
 	echo '<br>';
 	$i++;
-	//if($i == 10){
-		//die();
-	//}
+	//die();
+	// if($i == 10){
+	// 	die();
+	// }
 }
 //echo json_encode($tab);
 //echo '<pre>';
